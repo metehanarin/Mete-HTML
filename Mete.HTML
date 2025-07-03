@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High School English Grammar Progression</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f9fb;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 820px;
+      margin: 30px auto;
+      padding: 28px 32px 40px 32px;
+      background: #fff;
+      box-shadow: 0 6px 24px 0 rgba(40,60,90,.08);
+      border-radius: 18px;
+    }
+    h1, h2, h3 {
+      color: #234978;
+      margin-top: 1.6em;
+      margin-bottom: 0.3em;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 0.8em;
+    }
+    h2 {
+      font-size: 1.4rem;
+      border-bottom: 2px solid #e4e9f1;
+      padding-bottom: 4px;
+      margin-top: 1.6em;
+    }
+    ul {
+      margin-bottom: 1.1em;
+      padding-left: 1.3em;
+    }
+    li {
+      line-height: 1.72;
+      margin-bottom: 0.2em;
+      font-size: 1.06em;
+      cursor: pointer;
+      transition: background 0.14s;
+      border-radius: 6px;
+      padding: 2px 5px;
+    }
+    li:hover {
+      background: #e8f4fd;
+    }
+    .note {
+      background: #e8f4fd;
+      border-left: 6px solid #5ac8fa;
+      margin: 28px 0 16px 0;
+      padding: 13px 20px;
+      font-size: 1em;
+      border-radius: 6px;
+      color: #205173;
+    }
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: rgba(40,60,90,0.20);
+      justify-content: center;
+      align-items: center;
+      transition: 0.2s;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      background: #fff;
+      border-radius: 14px;
+      padding: 30px 22px 18px 22px;
+      max-width: 430px;
+      width: 92vw;
+      box-shadow: 0 4px 32px 0 rgba(40,60,90,.13);
+      text-align: left;
+      position: relative;
+      animation: pop 0.19s cubic-bezier(.3,.85,.45,1.24);
+    }
+    .modal-content h3 {
+      margin-top: 0;
+      font-size: 1.18em;
+      color: #234978;
+    }
+    .close {
+      position: absolute;
+      right: 18px;
+      top: 10px;
+      font-size: 1.45em;
+      color: #8eb3ce;
+      cursor: pointer;
+      transition: color 0.14s;
+    }
+    .close:hover {
+      color: #234978;
+    }
+    @keyframes pop {
+      from { transform: scale(0.93); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px 3vw;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      .modal-content {
+        padding: 14px 7px 9px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>High School English Grammar Progression<br><span style="font-size:1.12rem; color:#4682b4">(Grades 9–12, up to C1 Level)</span></h1>
+    <div class="note">
+      <strong>How to use:</strong> Click on any grammar topic to see a brief explanation and example.
+    </div>
+    
+    <!-- GRADE 9 -->
+    <h2>Grade 9 (B1 → early B2) – Clean-up & Consolidate</h2>
+    <ul>
+      <li data-topic="coreTense">Core tense review / Temel zamanların tekrarı</li>
+      <li data-topic="cond02">Conditionals 0–2 / Koşul cümleleri 0–2</li>
+      <li data-topic="simplePassive">Simple passive / Basit edilgen yapı</li>
+      <li data-topic="relativeClauses">Relative clauses / İlgi cümlecikleri</li>
+      <li data-topic="modalsObligation">Modal verbs for obligation & advice / Zorunluluk & tavsiye modalları</li>
+      <li data-topic="modalsAbility">Modals of ability & permission / Yetenek & izin modalları</li>
+      <li data-topic="gerundInf">Gerund vs. infinitive (starter) / Gerund ve mastar – başlangıç</li>
+      <li data-topic="comparatives">Comparatives, superlatives, degree modifiers / Karşılaştırmalar, üstünlükler, derece zarfları</li>
+      <li data-topic="tagQuestions">Question & tag-question formation / Soru ve soru eki yapısı</li>
+      <li data-topic="adverbs">Adverbs of frequency/manner/place / Sıklık / tarz / yer zarfları</li>
+      <li data-topic="basicPhrasals">Basic phrasal verbs / Temel deyimsel fiiller</li>
+    </ul>
+    <!-- GRADE 10 -->
+    <h2>Grade 10 (B2 Plateau) – Stretch & Specify</h2>
+    <ul>
+      <li data-topic="perfectContinuous">Perfect continuous forms / Mükemmel süreklilik zamanları</li>
+      <li data-topic="futureForms">Future continuous & future perfect / Gelecek süreklilik & gelecek mükemmel</li>
+      <li data-topic="passiveTenses">Passive across tenses + have/get sth done / Tüm zamanlarda edilgen + have/get yaptırmak</li>
+      <li data-topic="reportedSpeech">Reported speech / Dolaylı anlatım</li>
+      <li data-topic="modalsDeduction">Modals of deduction & speculation / Çıkarım & tahmin modalları</li>
+      <li data-topic="thirdMixedCond">Third & mixed conditionals / Üçüncü & karışık koşul cümleleri</li>
+      <li data-topic="relativeUpgrade">Relative-clause upgrades / İleri düzey ilgi cümlecikleri</li>
+      <li data-topic="participleClauses">Participle clauses (reduced relatives) / Sıfat-fiil cümlecikleri (kısaltılmış ilgi cümlecikleri)</li>
+      <li data-topic="gerundInfAdvanced">Gerund/infinitive advanced patterns / Gerund/mastar ileri kalıplar</li>
+      <li data-topic="quantifiers">Quantifiers & determiners / Nicelik belirleyiciler & tanımlayıcılar</li>
+      <li data-topic="usedTo">Used to / be used to / get used to</li>
+      <li data-topic="phrasalPrepositional">Phrasal & prepositional verbs / Deyimsel & edatlı fiiller</li>
+      <li data-topic="b2Linkers">B2 linkers & discourse markers / B2 düzeyinde bağlaçlar & söylem işaretçileri</li>
+    </ul>
+    <!-- GRADE 11 -->
+    <h2>Grade 11 (B2⁺ → early C1) – Academic Lift-Off</h2>
+    <ul>
+      <li data-topic="advConditionals">Advanced conditionals & mixed sets / İleri düzey koşul cümleleri & karışık tipler</li>
+      <li data-topic="inversionEmphasis">Inversion for emphasis / Vurgu için devrik yapı</li>
+      <li data-topic="unrealPast">The unreal past / Gerçek olmayan geçmiş</li>
+      <li data-topic="causative">Causative structures / Ettirgen yapılar</li>
+      <li data-topic="reportingPassive">Reporting & impersonal passive / Dolaylı edilgen & kişisiz edilgen</li>
+      <li data-topic="nominalisation">Nominalisation & noun-phrase packing / Adlaştırma & isim tamlamaları</li>
+      <li data-topic="cleftSentences">Fronting & cleft sentences / Öne çıkarma & bölünmüş cümleler</li>
+      <li data-topic="modalsPerfect">Modals + perfect aspect / Modallar + mükemmel zaman</li>
+      <li data-topic="advRelatives">Advanced relative devices / İleri düzey ilgi yapıları</li>
+      <li data-topic="participleChains">Participle-clause chains & absolutes / Sıfat-fiil zincirleri & mutlak yapılar</li>
+      <li data-topic="cohesion">Discourse cohesion / Söylem bütünlüğü</li>
+      <li data-topic="idiomaticPhrasals">Idiomatic phrasal verbs & collocations / Deyimsel fiiller & kalıplaşmış ifadeler</li>
+      <li data-topic="academicMarkers">Academic discourse markers / Akademik söylem işaretçileri</li>
+    </ul>
+    <!-- GRADE 12 -->
+    <h2>Grade 12 (C1 Target) – Precision & Power</h2>
+    <ul>
+      <li data-topic="highInversion">High-level inversion / Üst düzey devrik yapı</li>
+      <li data-topic="advEmphasis">Advanced emphasis / İleri düzey vurgu</li>
+      <li data-topic="nounPhraseArch">Complex noun-phrase architecture / Karmaşık isim tamlaması yapısı</li>
+      <li data-topic="nonfinite">Non-finite clause mastery / Fiilimsilerde ustalık</li>
+      <li data-topic="condAlt">Conditional alternatives / Koşul alternatifleri</li>
+      <li data-topic="subjunctive">Subjunctive & formulaic expressions / Dilek kipi & kalıplaşmış ifadeler</li>
+      <li data-topic="ellipsis">Ellipsis & substitution / Akademik tarzda eksilti & yerine koyma</li>
+      <li data-topic="advModalNuances">Advanced modal nuances / İleri düzey modal incelikleri</li>
+      <li data-topic="pragmaticGrammar">Pragmatic grammar / Pragmatik dilbilgisi</li>
+      <li data-topic="register">Register & style shifts / Üslup & biçem değişimleri</li>
+      <li data-topic="discTenseControl">Discourse-level tense control / Söylemde zaman kontrolü</li>
+      <li data-topic="c1Phrasals">C1 phrasal-verb idiomaticity / C1 düzeyinde deyimsel fiiller</li>
+      <li data-topic="lexicalBundles">Lexical bundles & collocations / Kalıplaşmış ifadeler & akademik kolokasyonlar</li>
+      <li data-topic="referencingSources">Grammar for referencing sources / Kaynak gösterme dilbilgisi</li>
+    </ul>
+    <div class="note">
+      <strong>Tip:</strong> Use this as an interactive checklist or curriculum map. Click for info/examples on any topic!
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modalContent">
+      <span class="close" id="modalClose">&times;</span>
+      <h3 id="modalTitle">Grammar Topic</h3>
+      <div id="modalBody">Description will go here.</div>
+    </div>
+  </div>
+  
+  <script>
+    const explanations = {
+      // Grade 9
+      coreTense: {
+        title: "Core tense review / Temel zamanların tekrarı",
+        body: "Present/past simple ve continuous, present perfect (her iki anlamda), past perfect ve temel gelecek zamanlar (will, be going to, present continuous for future) konularının tekrarı. <br><br><em>Örnek:</em><br>• Dün okula gittim.<br>• O, şu anda kitap okuyor.<br>• Biz üç yıldır burada yaşıyoruz.<br>• Yarın yağmur yağacak."
+      },
+      cond02: {
+        title: "Conditionals 0–2 / Koşul cümleleri 0–2",
+        body: "0. tip: Eğer + geniş zaman, geniş zaman (genel gerçekler); 1. tip: Eğer + geniş zaman, will (gerçek gelecek); 2. tip: Eğer + geçmiş zaman, would (şimdiki zamanda gerçek dışı). Ayrıca unless, in case gibi bağlaçlar. <br><br><em>Örnek:</em><br>• Eğer suyu ısıtırsan, kaynar.<br>• Eğer onu görürsem, söyleyeceğim.<br>• Eğer zengin olsaydım, dünyayı gezerdim."
+      },
+      simplePassive: {
+        title: "Simple passive / Basit edilgen yapı",
+        body: "Edilgen yapı, özneye yapılan eylemi vurgular. Tüm ana zamanlarda kullanılır. <br><br><em>Örnek:</em><br>• Kitap Tolstoy tarafından yazıldı.<br>• İngilizce burada konuşulur."
+      },
+      relativeClauses: {
+        title: "Relative clauses / İlgi cümlecikleri",
+        body: "İsimler hakkında daha fazla bilgi veren cümlecikler; who, which, that, whose gibi bağlaçlarla. Tanımlayıcı (gerekli bilgi) ve tanımlayıcı olmayan (ekstra bilgi) türleri vardır.<br><br><em>Örnek:</em><br>• Arayan kişi benim arkadaşım.<br>• Paris, Fransa'da olan şehir, güzeldir."
+      },
+      modalsObligation: {
+        title: "Modal verbs for obligation & advice / Zorunluluk & tavsiye modalları",
+        body: "Must, have to, should, ought to, need to gibi modallar zorunluluk, gereklilik veya tavsiye belirtir.<br><br><em>Örnek:</em><br>• Üniforma giymelisin.<br>• Bir doktora görünmelisin."
+      },
+      modalsAbility: {
+        title: "Modals of ability & permission / Yetenek & izin modalları",
+        body: "Can, could, may, be able to, be allowed to: yetenek belirtmek veya izin istemek/vermek için kullanılır.<br><br><em>Örnek:</em><br>• Yüzebilirim.<br>• İçeri girebilir miyim?"
+      },
+      gerundInf: {
+        title: "Gerund vs. infinitive (starter) / Gerund ve mastar – başlangıç",
+        body: "Bazı fiillerden sonra -ing veya to + fiil kullanımı.<br><br><em>Örnek:</em><br>• Kitap okumayı severim.<br>• Gitmek istiyorum."
+      },
+      comparatives: {
+        title: "Comparatives, superlatives, degree modifiers / Karşılaştırmalar, üstünlükler, derece zarfları",
+        body: "İki veya daha fazla şeyi karşılaştırmak; much, a lot, far, by far gibi derece zarflarıyla.<br><br><em>Örnek:</em><br>• O, ondan daha uzun.<br>• Bu, en heyecan verici film.<br>• Çok daha ilginç."
+      },
+      tagQuestions: {
+        title: "Question & tag-question formation / Soru ve soru eki yapısı",
+        body: "Onay almak için soru ekleri ve soru cümleleri oluşturma.<br><br><em>Örnek:</em><br>• Sen öğretmensin, değil mi?<br>• O burada çalışıyor mu?"
+      },
+      adverbs: {
+        title: "Adverbs of frequency/manner/place / Sıklık / tarz / yer zarfları",
+        body: "Zarflar ne sıklıkta, nasıl ve nerede sorularına cevap verir.<br><br><em>Örnek:</em><br>• O, her zaman erken gelir.<br>• Güzelce şarkı söyler.<br>• Onu buraya bıraktım."
+      },
+      basicPhrasals: {
+        title: "Basic phrasal verbs / Temel deyimsel fiiller",
+        body: "Sık kullanılan fiil + edat birleşimleri; anlamı genellikle kelimelerden çıkarılamaz.<br><br><em>Örnek:</em><br>• Giyinmek (put on), çıkarmak (take off), ilgilenmek (look after)."
+      },
+      // Grade 10
+      perfectContinuous: {
+        title: "Perfect continuous forms / Mükemmel süreklilik zamanları",
+        body: "Present perfect continuous (have/has been V-ing) ve past perfect continuous (had been V-ing) geçmişte başlayıp devam eden veya yeni biten eylemler için kullanılır.<br><br><em>Örnek:</em><br>• O, bütün gün ders çalışıyor.<br>• Onlar saatlerdir çalışıyordu."
+      },
+      futureForms: {
+        title: "Future continuous & future perfect / Gelecek süreklilik & gelecek mükemmel",
+        body: "Future continuous (will be V-ing) gelecekte devam eden eylemler için; future perfect (will have V-ed) ise gelecekte belirli bir zamana kadar tamamlanacak eylemler için kullanılır.<br><br><em>Örnek:</em><br>• Gelecek hafta bu zamanlar, bir plajda olacağım.<br>• 2026'ya kadar mezun olmuş olacak."
+      },
+      passiveTenses: {
+        title: "Passive across tenses + have/get sth done / Tüm zamanlarda edilgen + have/get yaptırmak",
+        body: "Edilgen yapı farklı zamanlarda; 'have/get something done' hizmet veya deneyim için kullanılır.<br><br><em>Örnek:</em><br>• Araba yıkanıyor.<br>• Saçımı kestirdim."
+      },
+      reportedSpeech: {
+        title: "Reported speech / Dolaylı anlatım",
+        body: "Birinin söylediğini aktarma (cümle, soru, emir); zaman uyumu kurallarıyla.<br><br><em>Örnek:</em><br>• Yorgun olduğunu söyledi.<br>• Kahve isteyip istemediğimi sordu."
+      },
+      modalsDeduction: {
+        title: "Modals of deduction & speculation / Çıkarım & tahmin modalları",
+        body: "Must/can't/might gibi modallar şimdiki veya geçmişte mantıksal tahminler için kullanılır.<br><br><em>Örnek:</em><br>• O, kesin iştedir.<br>• Beni görmüş olamaz."
+      },
+      thirdMixedCond: {
+        title: "Third & mixed conditionals / Üçüncü & karışık koşul cümleleri",
+        body: "Üçüncü tip: Geçmişte hayali durumlar (If + had V-ed, would have V-ed). Karışık: Geçmiş neden, şimdiki sonuç.<br><br><em>Örnek:</em><br>• Bilseydim, arardım.<br>• Ders çalışsaydım, şimdi daha mutlu olurdum."
+      },
+      relativeUpgrade: {
+        title: "Relative-clause upgrades / İleri düzey ilgi cümlecikleri",
+        body: "Daha gelişmiş yapılar: whose, edat + whom, where, when.<br><br><em>Örnek:</em><br>• Arabası çalınan adam.<br>• Büyüdüğüm şehir."
+      },
+      participleClauses: {
+        title: "Participle clauses (reduced relatives) / Sıfat-fiil cümlecikleri (kısaltılmış ilgi cümlecikleri)",
+        body: "Cümleleri kısaltmak için şimdiki veya geçmiş zaman sıfat-fiil kullanımı.<br><br><em>Örnek:</em><br>• Pencere kenarında oturan öğrenciler...<br>• Çin'de üretilen ürünler..."
+      },
+      gerundInfAdvanced: {
+        title: "Gerund/infinitive advanced patterns / Gerund/mastar ileri kalıplar",
+        body: "Fiil + nesne + to-infinitive veya V-ing gibi gelişmiş kalıplar.<br><br><em>Örnek:</em><br>• Onu beklememi istedi.<br>• Arabayı park etmeyi denedi."
+      },
+      quantifiers: {
+        title: "Quantifiers & determiners / Nicelik belirleyiciler & tanımlayıcılar",
+        body: "Each/every, both, either/neither, little/few vs a little/a few gibi miktar ve tanımlama kelimeleri.<br><br><em>Örnek:</em><br>• Her öğrenci hazır.<br>• Biraz süt var.<br>• Çok az kitap."
+      },
+      usedTo: {
+        title: "Used to / be used to / get used to",
+        body: "Geçmişte alışkanlıklar (used to), alışık olmak (be used to), alışmaya başlamak (get used to).<br><br><em>Örnek:</em><br>• Eskiden erken kalkardım.<br>• Soğuk havaya alışığım.<br>• Uzun saatler çalışmaya alışıyorum."
+      },
+      phrasalPrepositional: {
+        title: "Phrasal & prepositional verbs / Deyimsel & edatlı fiiller",
+        body: "Pick up on, come up with gibi deyimsel ve edatlı fiillerin kullanımı.<br><br><em>Örnek:</em><br>• Bir fikir bulmak (come up with).<br>• Bir konuyu yakalamak (pick up on)."
+      },
+      b2Linkers: {
+        title: "B2 linkers & discourse markers / B2 düzeyinde bağlaçlar & söylem işaretçileri",
+        body: "However, therefore, in spite of gibi B2 seviyesinde bağlaç ve söylem işaretçileri.<br><br><em>Örnek:</em><br>• Ancak, bu doğru değil.<br>• Bu nedenle, kabul edildi."
+      },
+      // Grade 11
+      advConditionals: {
+        title: "Advanced conditionals & mixed sets / İleri düzey koşul cümleleri & karışık tipler",
+        body: "Geçmiş → şimdi ve şimdi → geçmiş gibi karışık koşul cümleleri.<br><br><em>Örnek:</em><br>• Eğer çalışsaydım, şimdi başarılı olurdum.<br>• Eğer o burada olsaydı, dün yardım edebilirdi."
+      },
+      inversionEmphasis: {
+        title: "Inversion for emphasis / Vurgu için devrik yapı",
+        body: "Vurgu için cümle başında devrik yapı kullanımı: Never have I..., Not only did they..., So rarely do we...<br><br><em>Örnek:</em><br>• Hiçbir zaman böyle bir şey görmedim.<br>• Sadece yardım etmekle kalmadılar, aynı zamanda destek oldular."
+      },
+      unrealPast: {
+        title: "The unreal past / Gerçek olmayan geçmiş",
+        body: "Wish, if only, it's (high) time, I'd rather gibi yapılarla gerçek olmayan geçmiş zaman kullanımı.<br><br><em>Örnek:</em><br>• Keşke daha çok çalışsaydım.<br>• Artık gitme zamanı."
+      },
+      causative: {
+        title: "Causative structures / Ettirgen yapılar",
+        body: "Bir başkasına bir iş yaptırmak için have/get sb to V; have/get sth done yapıları.<br><br><em>Örnek:</em><br>• Arabamı tamir ettirdim.<br>• Onlara ödevlerini yaptırdım."
+      },
+      reportingPassive: {
+        title: "Reporting & impersonal passive / Dolaylı edilgen & kişisiz edilgen",
+        body: "It is believed that... gibi yapılarla edilgen cümleler.<br><br><em>Örnek:</em><br>• Onun suçlu olduğuna inanılıyor.<br>• Projenin tamamlandığı bildirildi."
+      },
+      nominalisation: {
+        title: "Nominalisation & noun-phrase packing / Adlaştırma & isim tamlamaları",
+        body: "Fiil veya sıfatları isimleştirerek daha akademik cümleler kurmak.<br><br><em>Örnek:</em><br>• Karar verilmesi.<br>• Uygulamanın başlatılması."
+      },
+      cleftSentences: {
+        title: "Fronting & cleft sentences / Öne çıkarma & bölünmüş cümleler",
+        body: "What I need is..., The person who... gibi öne çıkarma yapıları.<br><br><em>Örnek:</em><br>• İhtiyacım olan şey zaman.<br>• Beni arayan kişi geldi."
+      },
+      modalsPerfect: {
+        title: "Modals + perfect aspect / Modallar + mükemmel zaman",
+        body: "Should have V-ed, might have V-ed, needn't have V-ed gibi modallar + perfect yapı.<br><br><em>Örnek:</em><br>• Daha dikkatli olmalıydım.<br>• Gitmene gerek yoktu."
+      },
+      advRelatives: {
+        title: "Advanced relative devices / İleri düzey ilgi yapıları",
+        body: "All of whom, the majority of which gibi gelişmiş ilgi zamirleri.<br><br><em>Örnek:</em><br>• Katılanların çoğu başarılı oldu.<br>• Öğrencilerin hepsi sınavı geçti."
+      },
+      participleChains: {
+        title: "Participle-clause chains & absolutes / Sıfat-fiil zincirleri & mutlak yapılar",
+        body: "Birden fazla sıfat-fiil veya mutlak yapı ile cümle kurmak.<br><br><em>Örnek:</em><br>• Kapı açılmış, herkes içeri girmişti.<br>• Sınavı bitirip, sınıftan çıktı."
+      },
+      cohesion: {
+        title: "Discourse cohesion / Söylem bütünlüğü",
+        body: "Referans, yerine koyma, eksilti gibi söylem bütünlüğü araçları.<br><br><em>Örnek:</em><br>• Bunu yapan kişi o.<br>• Ben de öyle düşünüyorum."
+      },
+      idiomaticPhrasals: {
+        title: "Idiomatic phrasal verbs & collocations / Deyimsel fiiller & kalıplaşmış ifadeler",
+        body: "Set out to, take issue with gibi deyimsel fiiller ve kalıplaşmış ifadeler.<br><br><em>Örnek:</em><br>• Bir işe başlamak (set out to).<br>• Bir konuda itiraz etmek (take issue with)."
+      },
+      academicMarkers: {
+        title: "Academic discourse markers / Akademik söylem işaretçileri",
+        body: "Moreover, nonetheless, consequently gibi akademik bağlaçlar.<br><br><em>Örnek:</em><br>• Ayrıca, sonuç olarak, yine de."
+      },
+      // Grade 12
+      highInversion: {
+        title: "High-level inversion / Üst düzey devrik yapı",
+        body: "Hardly, scarcely, no sooner gibi kelimelerle başlayan devrik cümleler.<br><br><em>Örnek:</em><br>• Henüz eve varmıştım ki yağmur başladı (Hardly had I arrived home when it started to rain)."
+      },
+      advEmphasis: {
+        title: "Advanced emphasis / İleri düzey vurgu",
+        body: "Do/does/did + yalın fiil ile vurgu yapmak.<br><br><em>Örnek:</em><br>• Gerçekten seni seviyorum (I do love you)."
+      },
+      nounPhraseArch: {
+        title: "Complex noun-phrase architecture / Karmaşık isim tamlaması yapısı",
+        body: "Birden fazla ön ve son ekle karmaşık isim tamlamaları kurmak.<br><br><em>Örnek:</em><br>• Yeni inşa edilen modern okul binası."
+      },
+      nonfinite: {
+        title: "Non-finite clause mastery / Fiilimsilerde ustalık",
+        body: "Kendi öznesiyle -ing, past participle ve mastar yapıları.<br><br><em>Örnek:</em><br>• Onun gelmesiyle toplantı başladı.<br>• Arabası tamir edilmiş olarak geldi."
+      },
+      condAlt: {
+        title: "Conditional alternatives / Koşul alternatifleri",
+        body: "Were I to..., should you need..., on condition (that)... gibi alternatif koşul yapıları.<br><br><em>Örnek:</em><br>• Olur da yardıma ihtiyacın olursa, bana ulaşabilirsin."
+      },
+      subjunctive: {
+        title: "Subjunctive & formulaic expressions / Dilek kipi & kalıplaşmış ifadeler",
+        body: "It is essential that he be... gibi dilek kipi ve kalıplaşmış ifadeler.<br><br><em>Örnek:</em><br>• Onun burada olması şarttır."
+      },
+      ellipsis: {
+        title: "Ellipsis & substitution / Akademik tarzda eksilti & yerine koyma",
+        body: "So do I, neither does she, do so gibi eksilti ve yerine koyma yapıları.<br><br><em>Örnek:</em><br>• Ben de öyle.<br>• O da yapar."
+      },
+      advModalNuances: {
+        title: "Advanced modal nuances / İleri düzey modal incelikleri",
+        body: "Shall (hukuki dilde), dare/need gibi yarı-modal kullanımlar.<br><br><em>Örnek:</em><br>• Gerekirse yardım edebilirim.<br>• Kimse cesaret edemez."
+      },
+      pragmaticGrammar: {
+        title: "Pragmatic grammar / Pragmatik dilbilgisi",
+        body: "Hedging, stance (görüş belirtme): appears to..., is likely to...; concession: much as..., albeit gibi yapılar.<br><br><em>Örnek:</em><br>• Görünüşe göre bu doğru.<br>• Her ne kadar yorulsam da devam ettim."
+      },
+      register: {
+        title: "Register & style shifts / Üslup & biçem değişimleri",
+        body: "Resmi/gayriresmi dil, kısaltmalardan kaçınma, whom/whose kullanımı.<br><br><em>Örnek:</em><br>• Kiminle konuştuğun önemli. (whom)"
+      },
+      discTenseControl: {
+        title: "Discourse-level tense control / Söylemde zaman kontrolü",
+        body: "Gelecekte geçmiş, anlatıda zaman kayması gibi söylemde zaman kontrolü.<br><br><em>Örnek:</em><br>• O, gideceğini söyledi. (He said he would go.)"
+      },
+      c1Phrasals: {
+        title: "C1 phrasal-verb idiomaticity / C1 düzeyinde deyimsel fiiller",
+        body: "Bail out of, zero in on, bear down on gibi C1 seviyesinde deyimsel fiiller.<br><br><em>Örnek:</em><br>• Bir işten sıyrılmak (bail out of)."
+      },
+      lexicalBundles: {
+        title: "Lexical bundles & collocations / Kalıplaşmış ifadeler & akademik kolokasyonlar",
+        body: "It remains to be seen whether, play a pivotal role in gibi kalıplaşmış ifadeler ve akademik kolokasyonlar.<br><br><em>Örnek:</em><br>• Bunun olup olmayacağı henüz belli değil.<br>• Önemli bir rol oynamak."
+      },
+      referencingSources: {
+        title: "Grammar for referencing sources / Kaynak gösterme dilbilgisi",
+        body: "Doğrudan ve dolaylı kaynak gösterme yapıları.<br><br><em>Örnek:</em><br>• Smith (2020) şöyle belirtmiştir...<br>• ...olduğu iddia edilmektedir."
+      }
+    };
+
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modalContent');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    const modalClose = document.getElementById('modalClose');
+
+    document.querySelectorAll('li[data-topic]').forEach(item => {
+      item.addEventListener('click', () => {
+        const key = item.getAttribute('data-topic');
+        const info = explanations[key];
+        if (info) {
+          modalTitle.textContent = info.title;
+          modalBody.innerHTML = info.body;
+          modal.classList.add('active');
+        }
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
