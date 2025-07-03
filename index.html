@@ -290,7 +290,7 @@
     <h1>Metehan Teacher's High School Cheatsheet<br><span style="font-size:1.12rem; color:#4682b4">(Grades 9–12, up to C1 Level)</span></h1>
     <div class="note">
       <strong>How to use:</strong> Click on any grammar topic to see a brief explanation and example.<br>
-      <strong>Erişim:</strong> <a href="mailto:metehan.teacher@email.com">metehan.teacher@email.com</a> | <a href="https://t.me/metehan_teacher" target="_blank">Telegram</a>
+      <strong>Erişim:</strong> <a href="mailto:metehanarin@gmail.com">metehanarin@gmail.com</a>
     </div>
   </div>
   <div class="container section" id="topics">
@@ -366,9 +366,9 @@
     </div>
   </div>
   <div class="wordlist-section section" id="wordlist">
-    <h2>B1–C2 En Çok Kullanılan 100 Kelime</h2>
-    <div class="wordlist" id="wordlistContent">
-      <!-- 100 kelime buraya JS ile eklenecek -->
+    <h2>En Çok Kullanılan 100 Fiil ve 3 Hali</h2>
+    <div class="wordlist" id="verbListContent">
+      <!-- 100 fiil ve halleri buraya JS ile eklenecek -->
     </div>
   </div>
 
@@ -649,7 +649,6 @@
 
     const modal = document.getElementById('modal');
     const modalContent = document.getElementById('modalContent');
-    const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
     const modalClose = document.getElementById('modalClose');
 
@@ -665,7 +664,8 @@
       item.addEventListener('click', () => {
         const info = explanations[key];
         if (info) {
-          modalTitle.innerHTML = `<div class='modal-header'><span class='modal-emoji'>${info.emoji}</span><span class='modal-title'>${info.title}</span></div>`;
+          const header = `<div class='modal-header'><span class='modal-emoji'>${info.emoji}</span><span class='modal-title'>${info.title}</span></div>`;
+          modalContent.querySelector('.modal-header').outerHTML = header;
           modalBody.innerHTML = info.body;
           modal.classList.add('active');
         }
@@ -682,22 +682,47 @@
       }
     });
 
-    // 100 KELİME LİSTESİ (örnek, gerçek bir B1-C2 listesiyle değiştirilebilir)
-    const top100Words = [
-      "achieve", "acquire", "adapt", "adjust", "analyze", "approach", "assume", "aware", "benefit", "challenge",
-      "circumstance", "clarify", "collapse", "commit", "compensate", "complex", "component", "conclude", "conduct", "consequence",
-      "consider", "constant", "construct", "contribute", "convert", "core", "criteria", "crucial", "decline", "demonstrate",
-      "derive", "despite", "dimension", "distinct", "emerge", "emphasize", "enable", "encounter", "enhance", "ensure",
-      "establish", "evaluate", "evident", "exclude", "expand", "expose", "facilitate", "feature", "final", "focus",
-      "fund", "generate", "goal", "grant", "guarantee", "highlight", "hypothesis", "illustrate", "impact", "implement",
-      "imply", "impose", "incentive", "incorporate", "indicate", "individual", "inevitable", "inhibit", "initial", "innovate",
-      "insight", "integrate", "interact", "interpret", "invest", "involve", "issue", "justify", "maintain", "major",
-      "mediate", "modify", "monitor", "notion", "objective", "obtain", "occur", "outcome", "overall", "overcome",
-      "participate", "perceive", "persist", "policy", "potential", "precise", "predict", "primary", "principle", "prioritize"
+    // 100 FİİL ve 3 HALİ (V1, V2, V3)
+    const top100Verbs = [
+      ["be", "was/were", "been"], ["become", "became", "become"], ["begin", "began", "begun"], ["break", "broke", "broken"],
+      ["bring", "brought", "brought"], ["build", "built", "built"], ["buy", "bought", "bought"], ["catch", "caught", "caught"],
+      ["choose", "chose", "chosen"], ["come", "came", "come"], ["cost", "cost", "cost"], ["cut", "cut", "cut"],
+      ["do", "did", "done"], ["draw", "drew", "drawn"], ["drink", "drank", "drunk"], ["drive", "drove", "driven"],
+      ["eat", "ate", "eaten"], ["fall", "fell", "fallen"], ["feel", "felt", "felt"], ["find", "found", "found"],
+      ["fly", "flew", "flown"], ["forget", "forgot", "forgotten"], ["get", "got", "got/gotten"], ["give", "gave", "given"],
+      ["go", "went", "gone"], ["grow", "grew", "grown"], ["have", "had", "had"], ["hear", "heard", "heard"],
+      ["hold", "held", "held"], ["keep", "kept", "kept"], ["know", "knew", "known"], ["leave", "left", "left"],
+      ["let", "let", "let"], ["lose", "lost", "lost"], ["make", "made", "made"], ["mean", "meant", "meant"],
+      ["meet", "met", "met"], ["pay", "paid", "paid"], ["put", "put", "put"], ["read", "read", "read"],
+      ["ride", "rode", "ridden"], ["ring", "rang", "rung"], ["run", "ran", "run"], ["say", "said", "said"],
+      ["see", "saw", "seen"], ["sell", "sold", "sold"], ["send", "sent", "sent"], ["set", "set", "set"],
+      ["show", "showed", "shown"], ["shut", "shut", "shut"], ["sing", "sang", "sung"], ["sit", "sat", "sat"],
+      ["sleep", "slept", "slept"], ["speak", "spoke", "spoken"], ["spend", "spent", "spent"], ["stand", "stood", "stood"],
+      ["steal", "stole", "stolen"], ["swim", "swam", "swum"], ["take", "took", "taken"], ["teach", "taught", "taught"],
+      ["tell", "told", "told"], ["think", "thought", "thought"], ["throw", "threw", "thrown"], ["understand", "understood", "understood"],
+      ["wake", "woke", "woken"], ["wear", "wore", "worn"], ["win", "won", "won"], ["write", "wrote", "written"],
+      ["accept", "accepted", "accepted"], ["allow", "allowed", "allowed"], ["ask", "asked", "asked"], ["believe", "believed", "believed"],
+      ["call", "called", "called"], ["change", "changed", "changed"], ["clean", "cleaned", "cleaned"], ["close", "closed", "closed"],
+      ["cook", "cooked", "cooked"], ["dance", "danced", "danced"], ["describe", "described", "described"], ["enjoy", "enjoyed", "enjoyed"],
+      ["finish", "finished", "finished"], ["help", "helped", "helped"], ["hope", "hoped", "hoped"], ["invite", "invited", "invited"],
+      ["join", "joined", "joined"], ["learn", "learned/learnt", "learned/learnt"], ["like", "liked", "liked"], ["listen", "listened", "listened"],
+      ["live", "lived", "lived"], ["look", "looked", "looked"], ["love", "loved", "loved"], ["move", "moved", "moved"],
+      ["need", "needed", "needed"], ["open", "opened", "opened"], ["play", "played", "played"], ["rain", "rained", "rained"],
+      ["remember", "remembered", "remembered"], ["smile", "smiled", "smiled"], ["start", "started", "started"], ["stay", "stayed", "stayed"],
+      ["stop", "stopped", "stopped"], ["study", "studied", "studied"], ["talk", "talked", "talked"], ["travel", "traveled", "traveled"],
+      ["try", "tried", "tried"], ["turn", "turned", "turned"], ["use", "used", "used"], ["visit", "visited", "visited"],
+      ["wait", "waited", "waited"], ["walk", "walked", "walked"], ["want", "wanted", "wanted"], ["watch", "watched", "watched"],
+      ["work", "worked", "worked"], ["worry", "worried", "worried"]
     ];
-    const wordlistDiv = document.getElementById('wordlistContent');
-    if (wordlistDiv) {
-      wordlistDiv.innerHTML = top100Words.map(word => `<span>${word}</span>`).join('');
+    const verbListDiv = document.getElementById('verbListContent');
+    if (verbListDiv) {
+      let html = `<table style="width:100%;border-collapse:collapse;font-size:1.04em;">
+        <thead><tr style="background:#e0e7ff;"><th style="padding:6px 8px;">V1</th><th style="padding:6px 8px;">V2</th><th style="padding:6px 8px;">V3</th></tr></thead><tbody>`;
+      for (const [v1, v2, v3] of top100Verbs) {
+        html += `<tr><td style="padding:4px 8px;border-bottom:1px solid #e0e7ff;">${v1}</td><td style="padding:4px 8px;border-bottom:1px solid #e0e7ff;">${v2}</td><td style="padding:4px 8px;border-bottom:1px solid #e0e7ff;">${v3}</td></tr>`;
+      }
+      html += '</tbody></table>';
+      verbListDiv.innerHTML = html;
     }
     // Menüde aktif link vurgusu ve yumuşak kaydırma
     document.querySelectorAll('.nav-link').forEach(link => {
